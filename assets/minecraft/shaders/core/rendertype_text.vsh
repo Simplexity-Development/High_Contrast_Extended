@@ -26,6 +26,10 @@ void main() {
     vec4 ColorM = Color; // mutable version of Color uniform
 	if (vertexDistance > 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(64, 64, 64)) {
         ColorM = vec4(1.0, 1.0, 1.0, 1.0);
+    } else if (vertexDistance > 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(108, 112, 36)) {
+        ColorM = vec4(1.0, 1.0, 1.0, 1.0);
+    } else if (vertexDistance > 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(51, 46, 37)) {
+        ColorM = vec4(1.0, 1.0, 1.0, 1.0);
     }
 
     vertexColor = ColorM * texelFetch(Sampler2, UV2 / 16, 0);
