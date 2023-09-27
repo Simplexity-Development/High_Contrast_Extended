@@ -24,12 +24,18 @@ void main() {
     vertexDistance = fog_distance(ModelViewMat, IViewRotMat * Position, FogShape);
     
     vec4 ColorM = Color; // mutable version of Color uniform
-	if (vertexDistance > 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(64, 64, 64)) {
+	if (vertexDistance >= 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(64, 64, 64)) {
         ColorM = vec4(1.0, 1.0, 1.0, 1.0);
-    } else if (vertexDistance > 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(108, 112, 36)) {
+    } else if (vertexDistance >= 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(0, 0, 0)) {
         ColorM = vec4(1.0, 1.0, 1.0, 1.0);
-    } else if (vertexDistance > 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(51, 46, 37)) {
-        ColorM = vec4(1.0, 1.0, 1.0, 1.0);
+    }  else if (vertexDistance >= 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(52, 47, 37)) {
+        ColorM = vec4(0.0, 0.0, 0.0, 1.0);
+    }  else if (vertexDistance >= 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(170, 0, 170)) {
+        ColorM = vec4(201.0, 100.0, 252.0, 1.0);
+    }  else if (vertexDistance >= 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(104, 94, 74)) {
+        ColorM = vec4(85.0, 252.0, 7.0, 1.0);
+    }  else if (vertexDistance >= 800.0 && ivec3(ColorM.rgb * 255. + 0.5) == ivec3(255, 255, 128)) {
+        ColorM = vec4(252.0, 206.0, 2.0, 1.0);
     }
 
     vertexColor = ColorM * texelFetch(Sampler2, UV2 / 16, 0);
