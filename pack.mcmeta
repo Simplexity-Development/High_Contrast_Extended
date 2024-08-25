@@ -1,1 +1,15 @@
-{"pack": {"pack_format": 16, "description": {"text":"Extends Mojang's high contrast theme to all UIs", "color":"aqua"},"supported_formats": {"min_inclusive": 16, "max_inclusive": 19}}}
+{
+ "pack":
+   {
+     "pack_format": 34,
+     "description": {
+       "text":"Extends Mojang's high contrast theme to all UIs",
+       "color":"aqua"
+      },
+      "supported_formats":
+       {
+         "min_inclusive": 34,
+         "max_inclusive": 34
+       }
+   }
+}
